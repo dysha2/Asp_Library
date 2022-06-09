@@ -1,0 +1,87 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.MainNav {
+    background-color:red;
+}
+
+.HeaderList{
+
+}
+
+.HeaderList li {
+    display: inline;
+}
+
+.HeaderList li a{
+    margin:2px;
+    text-decoration:none;
+}
+
+.HeaderItems{
+    display:inline-block;
+}
+
+.HeaderList li .HeaderItems {
+    padding: 5px;
+    margin: 2px;
+    border: 2px solid white;
+}
+
+.HeaderList li a {
+    color: white;
+    font-size: 24px;
+}
+
+.HeaderList li:hover a {
+    font-size:23px;
+    transition:ease-in-out;
+    transition-duration:1.5s;
+}
+
+.ImageInList {
+    border: 2px solid red;
+}
+
+.MainHeader{
+    font-size:larger;
+}
+
+.ContentAside {
+    margin:5px;
+    padding:10px;
+    background-color: red;
+    float: left;
+}
+.ContentAside div {
+    border: 2px solid white;
+    padding:5px
+}
+.ContentAside ul {
+    list-style-type: square;
+}
+.ContentAside li{
+    color:white;
+    display:flex;
+}
+
+.ContentAside p {
+    color:white;
+    font-size:20px;
+}
