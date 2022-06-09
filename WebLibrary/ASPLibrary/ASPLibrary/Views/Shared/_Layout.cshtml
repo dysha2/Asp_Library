@@ -40,11 +40,11 @@
                         <div class="HeaderItems">
                             @if (User.Identity.IsAuthenticated)
                             {
-                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Logout">@User.Identity.Name (Выход)</a>
+                                <a asp-area="" asp-controller="User" asp-action="Logout">@User.Identity.Name (Выход)</a>
                             }
                             else
                             {
-                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Вход</a>
+                                <a asp-area="" asp-controller="User" asp-action="Login">Вход</a>
                             }
                         </div>
                     </li>
@@ -60,7 +60,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - ASPLibrary - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy;1978 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Made in Czechoslovakia.</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

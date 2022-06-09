@@ -17,6 +17,9 @@ body {
   margin-bottom: 60px;
 }
 
+h1, h2, h3, h4{
+    color:white;
+}
 .MainNav {
     background-color:red;
 }
@@ -68,6 +71,7 @@ body {
     padding:10px;
     background-color: red;
     float: left;
+    text-align:left;
 }
 .ContentAside div {
     border: 2px solid white;
@@ -75,6 +79,7 @@ body {
 }
 .ContentAside ul {
     list-style-type: square;
+    margin:0;
 }
 .ContentAside li{
     color:white;
@@ -83,9 +88,8 @@ body {
 
 .ContentAside p {
     color:white;
-    font-size:20px;
+    font-size:16px;
 }
-
 .Page_Content{
     display:grid;
     grid-template-columns:40% 60%;
@@ -104,4 +108,7 @@ body {
 .MainContent {
     display: grid;
     grid-template-columns: 15% 75%;
+}
+.Privacy{
+    margin:2em;
 }

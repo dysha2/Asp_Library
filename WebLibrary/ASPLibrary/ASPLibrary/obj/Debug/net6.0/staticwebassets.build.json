@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Gi/fwa/dlYVfbtqBddnV52qrx5nhmIY7qL1oY+aQiYY=",
+  "Hash": "E0qgNkuxUP5mv7dYKlaXMFGjmuxD1D5xIidc6MxG7ps=",
   "Source": "ASPLibrary",
   "BasePath": "_content/ASPLibrary",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\books\\clr_via_c.PNG"
+    },
+    {
+      "Identity": "C:\\dyshadima\\library\\WebLibrary\\ASPLibrary\\ASPLibrary\\wwwroot\\images\\books\\Imperialism.jpg",
+      "SourceId": "ASPLibrary",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\dyshadima\\library\\WebLibrary\\ASPLibrary\\ASPLibrary\\wwwroot\\",
+      "BasePath": "_content/ASPLibrary",
+      "RelativePath": "images/books/Imperialism.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\Imperialism.jpg"
     },
     {
       "Identity": "C:\\dyshadima\\library\\WebLibrary\\ASPLibrary\\ASPLibrary\\wwwroot\\images\\books\\jonson_system_prog.PNG",
