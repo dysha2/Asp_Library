@@ -1,0 +1,32 @@
+﻿
+@{
+    @model ASPLibrary.ViewModels.UserVM;
+}
+<form method="post" asp-controller="User" asp-action="Login">
+    <h2> Вход в систему: </h2>
+
+    <div class="mt-2">
+        @Html.LabelFor(model => model.Username, new { @class = "form-label" })
+        @Html.TextBoxFor(model => model.Username, new { @class = "form-control" })
+    </div>
+
+    <div class="mt-2">
+        @Html.LabelFor(model => model.Password, new { @class = "form-label" })
+        @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+    </div>
+    <div class="mt-2">
+        @Html.LabelFor(model => model.RepeatPassword, new { @class = "form-label" })
+        @Html.PasswordFor(model => model.RepeatPassword, new { @class = "form-control" })
+    </div>
+
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    <input type="submit" class="btn btn-outline-primary mt-3" />
+
+</form>
+
+@section Scripts {
+    @{
+        @Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

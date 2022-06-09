@@ -2,7 +2,7 @@
 
 namespace ASPLibrary.Models
 {
-    public enum UserType { Student, Admin };
+    public enum UserType { Proletarian, Gensec };
 
     public class User
     {

@@ -9,6 +9,11 @@ builder.Services.AddDbContext<LeninLibraryContext>(
  options =>
         options.UseSqlServer(
             builder.Configuration.GetConnectionString("LocalConnection")));
+builder.Services.AddAuthentication("mycookie")
+                .AddCookie("mycookie", options =>
+                    options.LoginPath = "/User/Login"
+                );
+
 
 var app = builder.Build();
 
@@ -24,7 +29,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

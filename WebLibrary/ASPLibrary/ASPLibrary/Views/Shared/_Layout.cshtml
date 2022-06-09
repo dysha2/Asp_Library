@@ -11,39 +11,44 @@
     <header>
         <nav>
             <div class="MainNav">
-                   <ul class="HeaderList">
-                       <li class="ImageInList"">
-                           <img src="/images/Pioneers_pin_rs.svg.png" width="5%" height="5%"/>
-                       </li>
-                        <li>
-                            <div class="HeaderItems">
-                                <a Class=MainHeader asp-area="" asp-controller="Home" asp-action="Index">
-                                    Электронная библиотека им. В.И.Ленина
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="HeaderItems">
-                                <a asp-area="" asp-controller="Home" asp-action="Index">
-                                    Центральная
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="HeaderItems">
-                                <a asp-area="" asp-controller="Home" asp-action="Index">
-                                    Подать декрет
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="HeaderItems">
-                                <a asp-controller="Home" asp-action="Index">
-                                    Войти
-                                </a>
-                            </div>
-                        </li>
-                   </ul>
+                <ul class="HeaderList">
+                    <li class="ImageInList"">
+                        <img src="/images/Pioneers_pin_rs.svg.png" width="5%" height="5%"/>
+                    </li>
+                    <li>
+                        <div class="HeaderItems">
+                            <a Class=MainHeader asp-area="" asp-controller="Home" asp-action="Index">
+                                Электронная библиотека им. В.И.Ленина
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="HeaderItems">
+                            <a asp-area="" asp-controller="Home" asp-action="Index">
+                                Центральная
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="HeaderItems">
+                            <a asp-area="" asp-controller="Home" asp-action="Index">
+                                Подать декрет
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="HeaderItems">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Logout">@User.Identity.Name (Выход)</a>
+                            }
+                            else
+                            {
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Вход</a>
+                            }
+                        </div>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>

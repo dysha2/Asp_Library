@@ -34,7 +34,7 @@
                         {
                             <p>Страниц: @book.Pages</p>
                         }
-                        <a>Скачать</a>
+                        <a asp-controller="Home" asp-action="Download" asp-route-filename="@book.Filename" class="d-block">Скачать</a>
                     </div>
                 </div>
             </div>

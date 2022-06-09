@@ -1,6 +1,8 @@
 ﻿using ASPLibrary.Models;
 using ASPLibrary.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.FileProviders;
 using System.Diagnostics;
 
 namespace ASPLibrary.Controllers
@@ -8,10 +10,12 @@ namespace ASPLibrary.Controllers
     public class HomeController : Controller
     {
         private readonly LeninLibraryContext context;
+        private readonly IWebHostEnvironment appEnvironment;
 
-        public HomeController(LeninLibraryContext context)
+        public HomeController(LeninLibraryContext context, IWebHostEnvironment appEnvironment)
         {
             this.context = context;
+            this.appEnvironment = appEnvironment;
         }
 
         public IActionResult Index()
@@ -31,6 +35,23 @@ namespace ASPLibrary.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        [Authorize]
+        public IActionResult Download(string filename)
+        {
+            var BooksPath = Path.Combine(appEnvironment.ContentRootPath, "Books");
+            PhysicalFileProvider fileProvider = new PhysicalFileProvider(BooksPath);
+
+            var file = fileProvider.GetFileInfo(filename);
+
+            if (file.Exists)
+            {
+                return PhysicalFile(file.PhysicalPath, "application/octet-stream", file.Name);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
     }
 }
