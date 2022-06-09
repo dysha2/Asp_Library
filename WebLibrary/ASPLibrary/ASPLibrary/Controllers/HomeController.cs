@@ -6,16 +6,16 @@ namespace ASPLibrary.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly LeninLibraryContext context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(LeninLibraryContext context)
         {
-            _logger = logger;
+            this.context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(context.Books.ToList());
         }
 
         public IActionResult Privacy()

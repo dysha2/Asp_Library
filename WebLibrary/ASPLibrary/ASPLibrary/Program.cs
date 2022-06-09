@@ -1,7 +1,14 @@
+using ASPLibrary.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<LeninLibraryContext>(
+ options =>
+        options.UseSqlServer(
+            builder.Configuration.GetConnectionString("LocalConnection")));
 
 var app = builder.Build();
 

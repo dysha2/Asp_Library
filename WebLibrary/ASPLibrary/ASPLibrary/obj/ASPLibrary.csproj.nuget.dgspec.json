@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\310-05\\Desktop\\WebLibrary\\ASPLibrary\\ASPLibrary\\ASPLibrary.csproj": {}
+    "C:\\dyshadima\\library\\WebLibrary\\ASPLibrary\\ASPLibrary\\ASPLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\310-05\\Desktop\\WebLibrary\\ASPLibrary\\ASPLibrary\\ASPLibrary.csproj": {
+    "C:\\dyshadima\\library\\WebLibrary\\ASPLibrary\\ASPLibrary\\ASPLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\310-05\\Desktop\\WebLibrary\\ASPLibrary\\ASPLibrary\\ASPLibrary.csproj",
+        "projectUniqueName": "C:\\dyshadima\\library\\WebLibrary\\ASPLibrary\\ASPLibrary\\ASPLibrary.csproj",
         "projectName": "ASPLibrary",
-        "projectPath": "C:\\Users\\310-05\\Desktop\\WebLibrary\\ASPLibrary\\ASPLibrary\\ASPLibrary.csproj",
+        "projectPath": "C:\\dyshadima\\library\\WebLibrary\\ASPLibrary\\ASPLibrary\\ASPLibrary.csproj",
         "packagesPath": "C:\\Users\\310-05\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\310-05\\Desktop\\WebLibrary\\ASPLibrary\\ASPLibrary\\obj\\",
+        "outputPath": "C:\\dyshadima\\library\\WebLibrary\\ASPLibrary\\ASPLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\310-05\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,22 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

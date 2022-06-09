@@ -1,4 +1,5 @@
 ﻿@{
+    @model List<ASPLibrary.Models.Book>
     ViewData["Title"] = "Home Page";
 }
 
@@ -7,28 +8,17 @@
         <div>
             <p>Категории</p>
             <ul>
-                <li>
-                    <p>
-                        кат.
-                    </p>
-                    <p> </p>
-                    <p>
-                        10шт.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        кат.
-                    </p>
-                    <p> </p>
-                    <p>
-                        5шт.
-                    </p>
-                </li>
+
             </ul>
         </div>
     </aside>
     <section>
-
+        @foreach(var book in Model)
+        {
+            <div>
+                <h2>@book.Title</h2>
+                <img src="/images/books/@book.Image">
+            </div>
+        }
     </section>
 </div>
