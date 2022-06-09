@@ -22,6 +22,7 @@ namespace ASPLibrary.Models
 
         [StringLength(100)]
         public string Filename { get; set; }
+        public int Pages { get; set; }
 
         [Required]
         public virtual Category Category { get; set; }

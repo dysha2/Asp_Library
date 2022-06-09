@@ -1,23 +1,42 @@
 ﻿@{
-    @model List<ASPLibrary.Models.Book>
+    @model ASPLibrary.ViewModels.IndexVM;
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+<div class="MainContent">
     <aside class="ContentAside">
         <div>
             <p>Категории</p>
             <ul>
+                @foreach(var category in Model.Categories)
+                {
+                    <li>
+                        <p>
+                        <a>@category.Name </a>
+                        @category.Books.Count()
+                        </p>
 
+                    </li>
+                }
             </ul>
         </div>
     </aside>
     <section>
-        @foreach(var book in Model)
+        @foreach(var book in Model.Books)
         {
-            <div>
+            <div class="Page">
                 <h2>@book.Title</h2>
-                <img src="/images/books/@book.Image">
+                <div class="Page_Content">
+                    <img src="/images/books/@book.Image">
+                    <div>
+                        <p>@book.Description</p>
+                        @if (@book.Pages > 0)
+                        {
+                            <p>Страниц: @book.Pages</p>
+                        }
+                        <a>Скачать</a>
+                    </div>
+                </div>
             </div>
         }
     </section>

@@ -85,3 +85,23 @@ body {
     color:white;
     font-size:20px;
 }
+
+.Page_Content{
+    display:grid;
+    grid-template-columns:40% 60%;
+}
+.Page_Content img {
+    width: -webkit-fill-available;
+    padding:2em;
+    padding-top:0;
+}
+.Page_Content a{
+    color:red;
+}
+.Page h2{
+    padding-left:1em;
+}
+.MainContent {
+    display: grid;
+    grid-template-columns: 15% 75%;
+}

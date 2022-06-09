@@ -1,4 +1,5 @@
 ﻿using ASPLibrary.Models;
+using ASPLibrary.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -15,7 +16,10 @@ namespace ASPLibrary.Controllers
 
         public IActionResult Index()
         {
-            return View(context.Books.ToList());
+            IndexVM indexVM = new IndexVM();
+            indexVM.Categories = context.Categories.ToList();
+            indexVM.Books = context.Books.ToList();
+            return View(indexVM);
         }
 
         public IActionResult Privacy()
